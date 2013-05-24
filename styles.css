@@ -1,0 +1,199 @@
+body { margin: 1rem; }
+h1, h2, h3, h4 { margin: 0; padding: 0; }
+h1 { margin-bottom: 1.5rem; }
+h2 { font-size: 18px; letter-spacing: 1px; }
+h3 { font-weight: 500; }
+h4 { margin-bottom: 0.5rem; }
+section { margin: 1.5rem 0; }
+footer { border-top: 1px dashed lightgray; padding-top: 1.5rem; }
+ul { padding-left: 1rem;  }
+li { margin-bottom: 0.3rem; max-width: 80ch; }
+blockquote { line-height: 2rem; border: 1px solid black; box-shadow: 4px 4px black; padding: 1rem 1.5rem; margin: 0 0 1.5rem; text-align: end; letter-spacing: 1px; }
+blockquote:hover {
+  box-shadow: 4px  4px #000,
+  8px  8px #222,
+  12px 12px #444,
+  16px 16px #666,
+  20px 20px #888,
+  24px 24px #aaa,
+  28px 28px #ccc,
+  32px 32px #eee;
+}
+
+.secret-garden a {
+  text-decoration: none;
+}
+
+.art  {
+  margin-left: 20px;
+  transform: rotate(2deg);
+}
+
+.art:hover { transform: rotate(0deg); }
+
+.picture-wire {
+  margin-left: 50px;
+  line-height:13px;
+}
+
+.earth {
+  bottom: 0;
+  left: 0;
+  background-color: olive;
+  height: 4px;
+  width: 400px;
+}
+.secret-garden {
+  background-image: linear-gradient(to bottom, azure, azure, white, lavenderblush);
+  margin-top: -25px;
+  height: 200px;
+  width: 400px;
+  border: 1px solid black;
+  box-shadow: 4px 4px black;
+  display: block;
+  position: relative;
+  font-family: monospace;
+
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+}
+
+.secret-garden > * {
+  position: absolute;
+}
+
+.secret-garden *:hover {
+  cursor: crosshair;
+}
+
+.turtle {
+  z-index: 40000;
+  left: 50%;
+  bottom: 0;
+  cursor: crosshair;
+}
+
+.turtle marquee {
+  font-size: 20px;
+}
+
+.turtle .say {
+  font-size: 12px;
+  position: absolute;
+  left: -9999px;
+  bottom: 0;
+}
+
+.turtle:hover .say {
+  cursor: help;
+  left: -30px;
+  display: block;
+}
+
+.rocks {
+  height: 20px;
+  line-height: 20px;
+  bottom: 0px;
+  text-wrap: nowrap;
+  color: darkgray;
+  bottom: 1px;
+}
+
+.rain {
+  font-size: 6px;
+  color: #bbb;
+  top: -24px;
+  left: 1px;
+}
+
+.rain-2 {
+  left: 200px;
+}
+
+.rain-3 {
+  top: -50px;
+  left: 100px;
+}
+
+.rain-4 {
+  top: -50px;
+  left: 300px;
+}
+
+.rain-5 {
+  top: -150px;
+  left: 50px;
+}
+
+.rain-6 {
+  top: -150px;
+  left: 350px;
+}
+
+.tree {
+  z-index: 999;
+  font-size: 64px;
+  line-height: 64px;
+  bottom: 1px;
+  left: 0;
+}
+
+.tree-2 {
+  font-size: 96px;
+  line-height: 96px;
+  bottom: 1px;
+  left: -150px;
+  width: 550px;
+}
+
+.mountain {
+  font-size: 136px;
+  line-height: 136px;
+  bottom: 3px;
+  left: 0;
+  height: 100px;
+}
+
+.mountain-2 {
+  left: -30px;
+  font-size: 176px;
+}
+
+.sig {
+  text-shadow: 1px 1px 2px white;
+  font-weight: bold;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 9px;
+  bottom: 2px;
+  right: 5px;
+}
+
+.sun {
+  font-size: 40px;
+  top: 10px;
+  right: 45px;
+  animation: spin 24s linear infinite;
+  transform-origin: center center;
+}
+
+.sun-cloud {
+  font-size: 50px;
+  top: 10px;
+  right: 30px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.bird {
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  opacity: 0.85;
+  z-index: 10000;
+}
