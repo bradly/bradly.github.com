@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ site.tagline }} | {{ site.name }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div id="header">
+      <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+      <h2>{{ site.tagline }}</h2>
+      <div id="twitter_link"><a href="http://www.twitter.com/{{ site.twitter }}" target="_blank">Follow me on Twitter</a></div>
+      <div id="github_link"><a href="http://www.github.com/{{ site.github }}" target="_blank">Fork me on Github</a></div>
+    </div>
+
+    <div id="content">{{ content }}</div>
+
+    <p id="footer">Copyright &copy; 2013 {{ site.author }}</p>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{{ site.google_analytics_id }}']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript">
+      var mpq = [];
+      mpq.push(["init", "{{ mixpanel_token }}"]);
+      (function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";
+      b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+
+      "//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];
+      a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push(
+      [f].concat(Array.prototype.slice.call(arguments,0)))}};d=["init","track","track_links",
+      "track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<
+      d.length;c++){mpq[d[c]]=e(d[c])}})();
+    </script>
+  </body>
+</html>

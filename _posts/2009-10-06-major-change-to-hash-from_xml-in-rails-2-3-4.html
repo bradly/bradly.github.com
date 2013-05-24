@@ -1,0 +1,16 @@
+---
+layout: post
+title: Major Change to Hash.from_xml in Rails 2.3.4
+tags:
+- Rails
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<p>Recently after upgrading a Rails app to Rails 2.3.4 I noticed some calls from a SOAP service throwing errors. After a little investigation I found this commit:</p>
+<script src="http://gist.github.com/187091.js"></script>
+<p>The problem is that since String#underscore lowercases the string, any Hashes created using Hash.from_xml with xml that contain any capital letters in the node names will break when updating to Rails 2.3.4.</p>
+<p>XML <em>is</em> case-sensitive, so reverting back to using underscore probably isn't going to happen, but this is definitely something that should have been a bigger focus at the release of 2.3.4.</p>
+<p>For apps using Hash.to_xml that would like to upgrade to Rails 2.3.4 with there existing codebase, I created a <a href="http://github.com/bradly/rails_hash_from_xml_compatibility_fix">small plugin</a> to revert back to the using .underscore when creating a hash from XML.</p>

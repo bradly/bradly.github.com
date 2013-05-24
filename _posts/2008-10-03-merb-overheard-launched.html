@@ -1,0 +1,19 @@
+---
+layout: post
+title: Merb Overheard Launched
+tags:
+- launch
+- Merb
+- merb overheard
+- pluto
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<p>Recently, Merb has been getting a lot of attention. With significant changes leading up to the 1.0 release, and now with it's <a href="http://www.merbcamp.org" target="_blank">own conference</a>, the Merb community needs a centralized place where relevant information can be found. Say hello to <a href="http://www.merboverheard.com" target="_blank">Merb Overheard</a>.</p>
+<p><a href="http://www.merboverheard.com" target="_blank">Merb Overheard</a> follows the planet-type aggregation sites similar to <a href="http://www.planetrubyonrails.com" target="_blank">Planet Ruby on Rails</a> and <a href="http://www.planet-php.net/" target="_blank">Planet PHP</a>. It follows a list of relevant blogs and aggregates those articles into one place.</p>
+<p>When I first decided to build <a href="http://www.merboverheard.com" target="_blank">Merb Overheard</a> I was originally planning on writing it in Merb of course, but I starting to realize all the battles I was going to have ahead of me. Caching and pagination of no database objects were not something I really wanted to deal with, so I decided to try something different. Instead of trying to shove the aggregator into a framework, why not just build out the pages statically?</p>
+<p><a href="http://www.merboverheard.com" target="_blank">Merb Overhead</a> is just a plain old ruby script that gets ran every 30 minutes from a cron task. Each time it is ran, all the pages are recreated using Erubius. This script, weighing in at a whopping 8 lines of code, implements two classes in a library I wrote called <a href="http://www.github.com/bradly/pluto" target="_blank">Pluto</a>. The class for the feed aggregator is only 30 lines. The class to generate the view is only 45 lines.</p>
+<p>The code is <a href="http://www.github.com/bradly/pluto" target="_blank">released on Github</a> so go nuts creating collecting all your <a href="http://www.geocities.com/furbyfans/" target="_blank">Furby Fan Club</a> sites or whatever else strikes your fancy.</p>

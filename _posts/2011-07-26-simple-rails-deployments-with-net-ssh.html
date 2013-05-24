@@ -1,0 +1,15 @@
+---
+layout: post
+title: Simple Rails Deployments with Net/SSH
+tags:
+- Rails
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<p>Recently I created a small Rails app as a sales/marketing site for the startup I am working at. The site is very basic with just a few models and controllers. We time came to deploy the site, Capistrano felt to big, but we didn't want to have to manually ssh in every time we had a code change. What I wanted was a way to run one command locally that would simply run a few commands on the remote server. To do this I turned to the net/ssh library.</p>
+<p>Just drop this code in lib/tasks/deploy.rake and now a simple `$ rake deploy` will push your changes live.</p>
+<script src="https://gist.github.com/1108644.js"></script>
+

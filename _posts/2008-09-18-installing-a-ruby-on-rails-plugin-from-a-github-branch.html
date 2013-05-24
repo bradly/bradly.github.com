@@ -1,0 +1,18 @@
+---
+layout: post
+title: Installing a Ruby on Rails Plugin from a Github Branch
+tags:
+- Git
+- github
+- plugins
+- Rails
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<p>One of the coolest things about Git is how easy it makes working with branches. Rails has been playing catch up with Git's distributed methodologies and recently took a nice step forward. Previously you could only use <code>./script/plugin install</code> to install from the master branch of a Github repository. Now you can specify the branch name when installing the plugin:</p>
+<p><code>./script/plugin install git://github.com/technoweenie/restful-authentication.git -r modular</code></p>
+<p>This will install the modular branch of the Restful Authentication plugin. Pretty cool, huh?</p>
+<p>At the time of writing this Rails 2.2 has not been released. If you are using Rails 2.1.0 or 2.1.1 you will need to upgrade to Edge Rails for this to work. Otherwise you will have to wait for 2.2 to be released.</p>
