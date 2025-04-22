@@ -2,65 +2,13 @@
 <html>
   <head>
     <title>Bradly Feeley - Trad-core Ruby on Rails engineer since 2006</title>
-    <style>
-      body { margin: 1rem; }
-      h1, h2, h3, h4 { margin: 0; padding: 0; }
-      h1 { margin-bottom: 1.5rem; }
-      h2 { font-size: 18px; letter-spacing: 1px; }
-      h3 { font-weight: 500; }
-      h4 { margin-bottom: 0.5rem; }
-      section { margin: 1.5rem 0; }
-      footer { border-top: 1px dashed lightgray; padding-top: 1.5rem; }
-      ul { padding-left: 1rem;  }
-      li { margin-bottom: 0.3rem; max-width: 80ch; }
-      blockquote { line-height: 2rem; border: 1px solid black; box-shadow: 4px 4px black; padding: 1rem 1.5rem; margin: 0 0 1.5rem; text-align: end; letter-spacing: 1px; }
-      blockquote:hover {
-        box-shadow: 4px  4px #000,
-        8px  8px #222,
-        12px 12px #444,
-        16px 16px #666,
-        20px 20px #888,
-        24px 24px #aaa,
-        28px 28px #ccc,
-        32px 32px #eee;
-      }
-
-      .secret-garden {
-        display: block;
-        position: relative;
-        font-size: 10px;
-        font-family: monospace;
-        border-bottom: 1.5px dashed black;
-        text-decoration: none;
-        color: black;
-      }
-
-      .secret-garden a {
-        text-decoration: none;
-      }
-
-      .secret-garden .fruit {
-        text-decoration: none;
-        color: black;
-        display: none;
-        position: absolute;
-        font-size: 18px;
-        top: 0;
-        left: 0;
-      }
-
-      .secret-garden:hover .fruit {
-        display: inline;
-      }
-
-      .fruit:hover { color: darkgreen; }
-    </style>
+    <link href="styles.css" rel="stylesheet">
   </head>
 
   <body>
     <h1>Bradly Feeley</h1>
     <div style="display: flex; gap: 4rem;">
-      <div style="">
+      <div>
         <h2>Trad-core Ruby on Rails engineer since 2006</h2>
         <h3><small>San Diego, California / Lopez Island, Washington / Everywhere in-between</small></h3>
 
@@ -140,37 +88,64 @@
           </ul>
         </section>
 
-        <div class="secret-garden">
-<pre style="margin-left: 10ch;">
-        ,,                            .-.
-       || |                            ) )
-       || |   ,                       '-'
-       || |  | |
-       || '--' |
- ,,    || .----'
-|| |   || |
-|  '---'| |
-'------.| |
-       || |
-       || |
-       || |
-</pre>
+        <div class="art">
+          <pre class="picture-wire">
+                     o
+   -----------------/----------------
+  /                                  \
+ /                                    \
+/                                      \
+          </pre>
+          <div class="secret-garden">
+            <pre class="say">
+  _________
+ /         \
+|  Thanks!  |
+ \_   _____/
+    V
+            </pre>
+            <div class="earth"></div>
+            <marquee class="mountain" direction="right" scrolldelay="300" scrollamount="1">⛰️</marquee>
+            <marquee class="mountain mountain-2" direction="right" scrolldelay="200" scrollamount="1">⛰️</marquee>
 
-          <marquee class="fruit"
-            direction="down"
-            width="400"
-            height="150"
-            scrollamount="4"
-            behavior="alternate">
-            <marquee behavior="alternate"><a href="secret-garden.html">🐦‍⬛</marquee>
-          </marquee>
+            <marquee direction="right" class="tree" scrollamount="1">🌲</marquee>
+            <marquee direction="right" class="tree-2" scrollamount="1">🌲</marquee>
+
+            <div class="sun">🌥️</div>
+            <div class="sig">BSF '25</div>
+
+            <marquee class="rain rain-1" scrolldelay="170" direction="down" scrollamount="5" width="32" height="200"><marquee width="32" direction="right" scrollamount="1">\</marquee></marquee>
+            <marquee class="rain rain-2" scrolldelay="120" direction="down" scrollamount="5" width="32" height="200"><marquee width="32" direction="right" scrollamount="1">\</marquee></marquee>
+            <marquee class="rain rain-3" scrolldelay="150" direction="down" scrollamount="5" width="32" height="200"><marquee width="32" direction="right" scrollamount="1">\</marquee></marquee>
+            <marquee class="rain rain-4" scrolldelay="140" direction="down" scrollamount="5" width="32" height="200"><marquee width="32" direction="right" scrollamount="1">\</marquee></marquee>
+            <marquee class="rain rain-5" scrolldelay="130" direction="down" scrollamount="6" width="32" height="200"><marquee width="32" direction="right" scrollamount="1">\</marquee></marquee>
+            <marquee class="rain rain-6" scrolldelay="160" direction="down" scrollamount="6" width="32" height="200"><marquee width="32" direction="right" scrollamount="1">\</marquee></marquee>
+
+            <marquee direction="right" scrolldelay="120" class="cloud" scrollamount="1" style="font-size: 10px; top: 10px;">☁️</marquee>
+            <marquee direction="right" scrolldelay="130" class="cloud" scrollamount="1" style="font-size: 10px; top: 90px;">☁️</marquee>
+            <marquee direction="right" scrolldelay="160" class="cloud" scrollamount="1" style="font-size:  8px; top: 32px;">☁️</marquee>
+            <marquee direction="right" scrolldelay="140" class="cloud" scrollamount="1" style="font-size: 12px; top: 44px;">☁️</marquee>
+            <marquee direction="right" scrolldelay="120" class="cloud" scrollamount="2" style="font-size: 30px; top: 15px;">☁️</marquee>
+            <marquee direction="right" scrolldelay="180" class="cloud" scrollamount="2" style="font-size: 34px; top: 40px;">☁️</marquee>
+            <marquee direction="right" scrolldelay="100" class="cloud" scrollamount="2" style="font-size: 26px; top: 65px;">☁️</marquee>
+            <marquee direction="right" scrolldelay="160" class="cloud" scrollamount="1" style="font-size: 40px; top: 25px;">☁️</marquee>
+            <marquee direction="right" scrolldelay="140" class="cloud" scrollamount="2" style="font-size: 44px; top: 40px;">☁️</marquee>
+
+            <marquee class="bird" direction="up" width="400" height="200" scrollamount="1" scrolldelay="120" behavior="alternate">
+              <marquee behavior="alternate" scrollamount="3" direction="left"><a href="secret-garden.html">🐦‍⬛</marquee>
+            </marquee>
+
+            <marquee width="21" scrollamount="1" scrolldelay="200" behavior="alternate" class="turtle">🐢</marquee>
+
+            <div class="rocks">_  __ ___   _ __ _ _     __ ___ _ _ _  __ ___   _ __ _ _     __ ___ _ _</div>
+          </div>
         </div>
       </div>
     </div>
 
     <footer>
       <small>
-        Copyright © 1981
+        Copyright © 1981 Bradly "T-Bone" Feeley
         <br />
         AI free &there4; human full. 𓀠𓀠
       </small>
