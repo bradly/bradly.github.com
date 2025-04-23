@@ -63,10 +63,32 @@ blockquote:hover {
   position: absolute;
 }
 
+.secret-garden *:hover {
+  cursor: crosshair;
+}
+
 .turtle {
-  font-size: 20px;
-  bottom: 0px;
+  z-index: 40000;
   left: 50%;
+  bottom: 0;
+  cursor: crosshair;
+}
+
+.turtle marquee {
+  font-size: 20px;
+}
+
+.turtle .say {
+  font-size: 12px;
+  position: absolute;
+  left: -9999px;
+  bottom: 0;
+}
+
+.turtle:hover .say {
+  cursor: help;
+  left: -30px;
+  display: block;
 }
 
 .rocks {
@@ -162,5 +184,3 @@ blockquote:hover {
   font-size: 18px;
 }
 
-.secret-garden .say { display: none; top: 200px; left: 200px; }
-.secret-garden:hover .say { display: block; }
