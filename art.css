@@ -1,4 +1,4 @@
-.secret-garden a {
+#secret-garden a {
   text-decoration: none;
 }
 
@@ -22,7 +22,7 @@
   width: 400px;
 }
 
-.secret-garden {
+#secret-garden {
   background-image: linear-gradient(to bottom, azure, azure, white, lavenderblush);
   margin-top: -25px;
   height: 200px;
@@ -36,11 +36,11 @@
   overflow: hidden;
 }
 
-.secret-garden > * {
+#secret-garden > * {
   position: absolute;
 }
 
-.secret-garden *:hover {
+#secret-garden *:hover {
   cursor: crosshair;
 }
 

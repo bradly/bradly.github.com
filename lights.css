@@ -4,10 +4,10 @@
   overflow: hidden;
   position: fixed;
   z-index: 1000;
-  margin: -2rem -5rem;
+  margin: -0.5rem -5rem;
   padding: 0;
   pointer-events: none;
-  width: 150%;
+  width: 125%;
 }
 
 #lightrope > li {
