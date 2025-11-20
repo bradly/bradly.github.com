@@ -45,12 +45,12 @@
   animation-iteration-count: infinite, infinite, 1;
 }
 
-#lights > li:nth-child(6n)   > div { animation-duration: 4.4s, 4.1s, 3.2s; }
-#lights > li:nth-child(6n+1) > div { animation-duration: 7.2s, 4.3s, 2.8s; }
-#lights > li:nth-child(6n+2) > div { animation-duration: 3.1s, 4.5s, 3.4s; }
-#lights > li:nth-child(6n+3) > div { animation-duration: 6.7s, 4.7s, 2.7s; }
-#lights > li:nth-child(6n+4) > div { animation-duration: 5.0s, 4.9s, 2.6s; }
-#lights > li:nth-child(6n+5) > div { animation-duration: 4.8s, 5.1s, 3.0s; }
+#lights > li:nth-child(6n)   > div { animation-duration: 4.4s, 4.1s, 3.2s; animation-delay: 0s, 0s, 0.1s; }
+#lights > li:nth-child(6n+1) > div { animation-duration: 7.2s, 4.3s, 2.8s; animation-delay: 0s, 0s, 0.0s; }
+#lights > li:nth-child(6n+2) > div { animation-duration: 3.1s, 4.5s, 3.4s; animation-delay: 0s, 0s, 0.2s; }
+#lights > li:nth-child(6n+3) > div { animation-duration: 6.7s, 4.7s, 2.7s; animation-delay: 0s, 0s, 0.1s; }
+#lights > li:nth-child(6n+4) > div { animation-duration: 5.0s, 4.9s, 2.6s; animation-delay: 0s, 0s, 0.2s; }
+#lights > li:nth-child(6n+5) > div { animation-duration: 4.8s, 5.1s, 3.0s; animation-delay: 0s, 0s, 0.0s; }
 
 #lights > li:nth-child(6n+0) > div {
   background: var(--white);
