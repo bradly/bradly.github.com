@@ -185,7 +185,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  #secret-garden { background-image: linear-gradient(to bottom, black, midnightblue) };
+  #secret-garden {
+    color: var(--color);
+    background-image: linear-gradient(to bottom, black, midnightblue);
+  }
+  .say { opacity: 0.5; }
   .moon { display: block; }
   .sun, .sun-cloud { display: none; }
   .cloud:nth-child(3n)   { opacity: .1; }
