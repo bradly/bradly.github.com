@@ -137,12 +137,14 @@
 }
 
 .sig {
-  text-shadow: 1px 1px 2px white;
+  color: var(--color);
+  text-shadow: 1px 1px 2px var(--backgroun);
   font-weight: bold;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-size: 9px;
-  bottom: 2px;
-  right: 5px;
+  bottom: 5px;
+  right: 8px;
+  opacity: 0.7;
 }
 
 .sun {
@@ -185,9 +187,8 @@
 @media (prefers-color-scheme: dark) {
   #secret-garden { background-image: linear-gradient(to bottom, black, midnightblue) };
   .moon { display: block; }
-  .sun { display: none; }
+  .sun, .sun-cloud { display: none; }
   .cloud:nth-child(3n)   { opacity: .1; }
   .cloud:nth-child(3n+1) { opacity: .3; }
   .cloud:nth-child(3n+2) { opacity: .4; }
-  .sun-cloud { display: none; }
 }
