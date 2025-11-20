@@ -1,0 +1,131 @@
+:root {
+     --red: #C62828;
+    --blue: #1E3A8A;
+   --green: #1B5E20;
+   --white: #FFD7A3;
+  --yellow: #FF8F00;
+  --purple: #6A1B9A;
+}
+
+#bulbs {
+  text-align: center;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  min-width: 1000px;
+}
+
+#bulbs > li {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  transform: translateY(8px);
+}
+
+#bulbs > li > div {
+  position: relative;
+  border-left: 2px solid rgba(0,0,0,.05);
+  border-right: 2px solid rgba(255,255,255,.5);
+  margin: 2px 0 0 -3px;
+  padding: 0;
+  display: block;
+  width: 8px;
+  height: 18px;
+  border-radius: 50%;
+  transform-origin: top center;
+  animation-fill-mode: forwards;
+  pointer-events: auto;
+  animation-name: flash-all, sway, flickPendulum;
+  animation-timing-function: linear, ease-in-out, cubic-bezier(0.25, 0.6, 0.3, 1);
+  animation-iteration-count: infinite, infinite, 1;
+  box-shadow: 0px 1px 18px var(--white);
+}
+
+#bulbs > li:nth-child(6n)   > div { animation-duration: 4.4s, 4.1s, 3.2s; animation-delay: 0s, 0s, 0.1s; }
+#bulbs > li:nth-child(6n+1) > div { animation-duration: 7.2s, 4.3s, 2.8s; animation-delay: 0s, 0s, 0.0s; }
+#bulbs > li:nth-child(6n+2) > div { animation-duration: 3.1s, 4.5s, 3.4s; animation-delay: 0s, 0s, 0.2s; }
+#bulbs > li:nth-child(6n+3) > div { animation-duration: 6.7s, 4.7s, 2.7s; animation-delay: 0s, 0s, 0.1s; }
+#bulbs > li:nth-child(6n+4) > div { animation-duration: 5.0s, 4.9s, 2.6s; animation-delay: 0s, 0s, 0.2s; }
+#bulbs > li:nth-child(6n+5) > div { animation-duration: 4.8s, 5.1s, 3.0s; animation-delay: 0s, 0s, 0.0s; }
+
+#bulbs > li:nth-child(6n+0) > div {
+  background: var(--white);
+}
+
+#bulbs > li:nth-child(6n+1) > div {
+  background: var(--blue);
+}
+
+#bulbs > li:nth-child(6n+2) > div {
+  background: var(--red);
+}
+
+#bulbs > li:nth-child(6n+3) > div {
+  background: var(--yellow);
+}
+
+#bulbs > li:nth-child(6n+4) > div {
+  background: var(--purple);
+}
+
+#bulbs > li:nth-child(6n+5) > div {
+  background: var(--green);
+}
+
+#bulbs > li > div:hover {
+  animation: flash-all 0.8s infinite linear;
+}
+
+#bulbs > li::before {
+  content: "";
+  position: absolute;
+  background: #262;
+  width: 4px;
+  height: 8px;
+  border-radius: 3px;
+  top: -5px;
+  left: -1px;
+  border-left: 2px solid rgba(0, 0, 0, .05);
+  border-right: 2px solid rgba(255, 255, 255, .5);
+}
+
+@keyframes flickPendulum {
+    0% { transform: rotate(  0deg); }
+   10% { transform: rotate( 20deg); }
+   20% { transform: rotate(-18deg); }
+   30% { transform: rotate( 15deg); }
+   40% { transform: rotate(-12deg); }
+   50% { transform: rotate(  9deg); }
+   60% { transform: rotate( -6deg); }
+   70% { transform: rotate(  4deg); }
+   80% { transform: rotate( -2deg); }
+   90% { transform: rotate(  1deg); }
+  100% { transform: rotate(  0deg); }
+}
+
+@keyframes flash-all {
+  0%, 37.5%, 62.5%, 100% { opacity: 1; }
+  50% { opacity: .75; }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0.5deg); }
+  50% { transform: rotate(-0.5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #bulbs > li > div { animation: none !important; }
+}
+
+#bulbs:hover, .note-cursor {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="24" font-size="24">🎵</text></svg>') 16 16, auto;
+}
