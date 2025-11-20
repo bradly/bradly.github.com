@@ -1,6 +1,5 @@
-#secret-garden a {
-  text-decoration: none;
-}
+#secret-garden a { text-decoration: none; }
+#secret-garden { box-shadow: 0 0 0 1px var(--art-frame); }
 
 .art  {
   margin-left: 20px;
@@ -154,7 +153,16 @@
   transform-origin: center center;
 }
 
+.moon {
+  font-size: 30px;
+  top: 30px;
+  right: 55px;
+  display: none;
+  opacity: .8;
+}
+
 .sun-cloud {
+  color: black;
   font-size: 50px;
   top: 10px;
   right: 30px;
@@ -171,6 +179,15 @@
   text-decoration: none;
   color: black;
   font-size: 14px;
-  opacity: 0.8;
   z-index: 10000;
+}
+
+@media (prefers-color-scheme: dark) {
+  #secret-garden { background-image: linear-gradient(to bottom, black, midnightblue) };
+  .moon { display: block; }
+  .sun { display: none; }
+  .cloud:nth-child(3n)   { opacity: .1; }
+  .cloud:nth-child(3n+1) { opacity: .3; }
+  .cloud:nth-child(3n+2) { opacity: .4; }
+  .sun-cloud { display: none; }
 }
