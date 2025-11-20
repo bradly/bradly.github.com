@@ -1,19 +1,30 @@
+:root {
+  --red: #C62828;
+  --blue: #1E3A8A;
+  --green: #1B5E20;
+  --white: #FFD7A3;
+  --yellow: #FF8F00;
+  --purple: #6A1B9A;
+   --glow: 0px 4px 18px;
+}
+
 #lights {
   text-align: center;
   white-space: nowrap;
   position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-8px);
   z-index: 1000;
-  margin-top: -0.8rem;
   padding: 0;
   pointer-events: none;
-  width: 125%;
 }
 
 #lights > li {
   position: relative;
   display: inline-block;
   list-style: none;
-  margin: 20px 20px 20px 22px;
+  margin: 0 20px 20px 22px;
 }
 
 #lights > li > div {
@@ -27,114 +38,77 @@
   height: 18px;
   border-radius: 50%;
   transform-origin: top center;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   pointer-events: auto;
-}
-
-/* Colors for different bulbs */
-#lights > li:nth-child(5n+0) > div {
-  -webkit-animation-duration: 0.8s, 4.1s, 3s;
-  animation-duration: 0.8s, 4.1s, 3s;
-}
-
-#lights > li:nth-child(5n+1) > div {
-  -webkit-animation-duration: .9s, 4.3s, 3s;
-  animation-duration: .9s, 4.3s, 3s;
-}
-
-#lights > li:nth-child(5n+2) > div {
-  -webkit-animation-duration: 1s, 4.5s, 3s;
-  animation-duration: 1s, 4.5s, 3s;
-}
-
-#lights > li:nth-child(5n+3) > div {
-  -webkit-animation-duration: 1.1s, 4.7s, 3s;
-  animation-duration: 1.1s, 4.7s, 3s;
-}
-
-#lights > li:nth-child(5n+4) > div {
-  -webkit-animation-duration: 1.2s, 4.9s, 3s;
-  animation-duration: 1.2s, 4.9s, 3s;
-}
-
-/* Animation assignments */
-#lights > li:nth-child(4n+0) > div {
-  -webkit-animation-name: flash-all, sway, flickPendulum;
   animation-name: flash-all, sway, flickPendulum;
-  -webkit-animation-timing-function: linear, ease-in-out, cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-timing-function: linear, ease-in-out, cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-animation-iteration-count: infinite, infinite, 1;
+  animation-timing-function: linear, ease-in-out, cubic-bezier(0.25, 0.6, 0.3, 1);
   animation-iteration-count: infinite, infinite, 1;
-  background: #00f7a5;
-  box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
 }
 
-#lights > li:nth-child(4n+1) > div {
-  -webkit-animation-name: flash-all, sway, flickPendulum;
-  animation-name: flash-all, sway, flickPendulum;
-  -webkit-animation-timing-function: linear, ease-in-out, cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-timing-function: linear, ease-in-out, cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-animation-iteration-count: infinite, infinite, 1;
-  animation-iteration-count: infinite, infinite, 1;
-  background: #0CF;
-  box-shadow: 0px 4.6666666667px 24px 3px #0CF;
+#lights > li:nth-child(6n)   > div { animation-duration: 0.8s, 4.1s, 3s; }
+#lights > li:nth-child(6n+1) > div { animation-duration: 0.9s, 4.3s, 3s; }
+#lights > li:nth-child(6n+2) > div { animation-duration: 1.0s, 4.5s, 3s; }
+#lights > li:nth-child(6n+3) > div { animation-duration: 1.1s, 4.7s, 3s; }
+#lights > li:nth-child(6n+4) > div { animation-duration: 1.2s, 4.9s, 3s; }
+#lights > li:nth-child(6n+5) > div { animation-duration: 1.3s, 5.1s, 3s; }
+
+#lights > li:nth-child(6n+0) > div {
+  background: var(--white);
+  box-shadow: var(--glow) var(--white);
 }
 
-#lights > li:nth-child(4n+2) > div {
-  -webkit-animation-name: flash-all, sway, flickPendulum;
-  animation-name: flash-all, sway, flickPendulum;
-  -webkit-animation-timing-function: linear, ease-in-out, cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-timing-function: linear, ease-in-out, cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-animation-iteration-count: infinite, infinite, 1;
-  animation-iteration-count: infinite, infinite, 1;
-  background: #f76666;
-  box-shadow: 0px 4.6666666667px 24px 3px #f76666;
+#lights > li:nth-child(6n+1) > div {
+  background: var(--blue);
+  box-shadow: var(--glow) var(--blue);
 }
 
-#lights > li:nth-child(4n+3) > div {
-  -webkit-animation-name: flash-all, sway, flickPendulum;
-  animation-name: flash-all, sway, flickPendulum;
-  -webkit-animation-timing-function: linear, ease-in-out, cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-timing-function: linear, ease-in-out, cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-animation-iteration-count: infinite, infinite, 1;
-  animation-iteration-count: infinite, infinite, 1;
-  background: #FFEE33;
-  box-shadow: 0px 4.6666666667px 24px 3px #FFEE33;
+#lights > li:nth-child(6n+2) > div {
+  background: var(--red);
+  box-shadow: var(--glow) var(--red);
+}
+
+#lights > li:nth-child(6n+3) > div {
+  background: var(--yellow);
+  box-shadow: var(--glow) var(--yellow);
+}
+
+#lights > li:nth-child(6n+4) > div {
+  background: var(--purple);
+  box-shadow: var(--glow) var(--purple);
+}
+
+#lights > li:nth-child(6n+5) > div {
+  background: var(--green);
+  box-shadow: var(--glow) var(--green);
 }
 
 #lights > li > div:hover {
-  -webkit-animation: flash-all 0.8s infinite linear;
   animation: flash-all 0.8s infinite linear;
 }
 
-/* Special case for the fifth light */
-#lights > li.broken > div {
-  left: -2px;
-  background: #CCC !important;
-  border-left: 2px solid #BDE;
-  border-right: 2px solid #DEF;
-  box-shadow: none !important;
-  -webkit-animation-name: none !important;
-  animation-name: none !important;
-  -webkit-animation-duration: 0s !important;
-  animation-duration: 0s !important;
-  -webkit-transform: rotatez(15deg) !important;
-  transform: rotatez(15deg) !important;
-}
-
-/* Bulb top and cord */
-#lights > li:before {
+#lights > li::before {
   content: "";
   position: absolute;
   background: #262;
   width: 4px;
   height: 8px;
   border-radius: 3px;
-  top: -4.6666666667px;
+  top: -5px;
   left: -1px;
-  border-left: 2px solid rgba(0,0,0,.05);
-  border-right: 2px solid rgba(255,255,255,.5);
+  border-left: 2px solid rgba(0, 0, 0, .05);
+  border-right: 2px solid rgba(255, 255, 255, .5);
+}
+
+#lights > li:first-child {
+  margin-left: 0;
+}
+
+#lights > li:first-child::before {
+  display: none;
+}
+
+#lights > li:first-child > div {
+  visibility: hidden;
 }
 
 #lights > li::after {
@@ -143,39 +117,19 @@
   left: -1px;
   position: absolute;
   width: 58px;
-  height: 18.6666666667px;
+  height: 18px;
   border-bottom: solid #262 2px;
   border-radius: 50%;
   background: #060;
-  --mask: radial-gradient(5.66px at 50% calc(100% + 4.2px),#0000 calc(99% - 1px),#000 calc(101% - 1px) 99%,#0000 101%) calc(50% - 6px) calc(50% - 2px + .5px)/12px 4px repeat-x,
-          radial-gradient(5.66px at 50% -4.2px,#0000 calc(99% - 1px),#000 calc(101% - 1px) 99%,#0000 101%) 50% calc(50% + 2px)/12px 4px repeat-x,
-          radial-gradient(7.38px at 50% calc(100% + 5.6px),#0000 calc(99% - 1px),#000 calc(101% - 1px) 99%,#0000 101%) calc(50% - 8px) calc(50% - 2.5px + .5px)/16px 5px repeat-x,
-          radial-gradient(7.38px at 50% -5.6px,#0000 calc(99% - 1px),#000 calc(101% - 1px) 99%,#0000 101%) 50% calc(50% + 2.5px)/16px 5px repeat-x;
-  -webkit-mask: var(--mask);
+  --mask: radial-gradient(5px at 50% calc(100% + 4px), #0000 calc(99% - 1px),#000 calc(101% - 1px) 99%,#0000 101%) calc(50% - 6px) calc(50% - 2px   + .5px)/12px 4px repeat-x,
+          radial-gradient(5px at 50%            -4px , #0000 calc(99% - 1px),#000 calc(101% - 1px) 99%,#0000 101%)            50%  calc(50% + 2px         )/12px 4px repeat-x,
+          radial-gradient(7px at 50% calc(100% + 5px), #0000 calc(99% - 1px),#000 calc(101% - 1px) 99%,#0000 101%) calc(50% - 8px) calc(50% - 2.5px + .5px)/16px 5px repeat-x,
+          radial-gradient(7px at 50%            -5px , #0000 calc(99% - 1px),#000 calc(101% - 1px) 99%,#0000 101%)            50%  calc(50% + 2.5px       )/16px 5px repeat-x;
   mask: var(--mask);
 }
 
-#lights li:last-child:after {
+#lights li:last-child::after {
   content: none;
-}
-
-#lights li:first-child {
-  margin-left: -40px;
-}
-
-/* Animations */
-@-webkit-keyframes flickPendulum {
-  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-  10% { -webkit-transform: rotate(20deg); transform: rotate(20deg); }
-  20% { -webkit-transform: rotate(-18deg); transform: rotate(-18deg); }
-  30% { -webkit-transform: rotate(15deg); transform: rotate(15deg); }
-  40% { -webkit-transform: rotate(-12deg); transform: rotate(-12deg); }
-  50% { -webkit-transform: rotate(9deg); transform: rotate(9deg); }
-  60% { -webkit-transform: rotate(-6deg); transform: rotate(-6deg); }
-  70% { -webkit-transform: rotate(4deg); transform: rotate(4deg); }
-  80% { -webkit-transform: rotate(-2deg); transform: rotate(-2deg); }
-  90% { -webkit-transform: rotate(1deg); transform: rotate(1deg); }
-  100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 }
 
 @keyframes flickPendulum {
@@ -192,24 +146,18 @@
   100% { transform: rotate(0deg); }
 }
 
-@-webkit-keyframes flash-all {
-  0%, 25%, 75%, 100% { opacity: 1; }
-  50% { opacity: .45; }
-}
-
 @keyframes flash-all {
   0%, 25%, 75%, 100% { opacity: 1; }
-  50% { opacity: .45; }
-}
-
-@-webkit-keyframes sway {
-  0%, 100% { -webkit-transform: rotate(0.5deg); transform: rotate(0.5deg); }
-  50% { -webkit-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
+  50% { opacity: .5; }
 }
 
 @keyframes sway {
   0%, 100% { transform: rotate(0.5deg); }
   50% { transform: rotate(-0.5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #lights > li > div { animation: none !important; }
 }
 
 #lights:hover, .note-cursor {
