@@ -14,6 +14,20 @@
   }
 }
 
+body.dark {
+  --background: #001;
+  --color: #FFe;
+  --link: #58a6ff;
+  --art-frame: var(--color);
+}
+
+body.light {
+  --background: #fff;
+  --color: #222;
+  --link: #00b;
+  --art-frame: var(--background);
+}
+
 body {
   margin: 1rem;
   color: var(--color);
@@ -27,7 +41,7 @@ h1 { margin-bottom: 1.5rem; }
 h2 { font-size: 18px; letter-spacing: 1px; }
 h3 { font-weight: 500; }
 h4 { margin-bottom: 0.5rem; }
-ul { padding-left: 1rem;  }
+ul { padding-left: 1rem; }
 li { margin-bottom: 0.3rem; max-width: 80ch; }
 
 footer {
@@ -56,4 +70,10 @@ blockquote:hover {
     24px 24px color-mix(in srgb, var(--color)  37%, var(--background) 63%),
     28px 28px color-mix(in srgb, var(--color)  25%, var(--background) 75%),
     32px 32px color-mix(in srgb, var(--color)  12%, var(--background) 88%);
+}
+
+#main {
+  position: relative;
+  display: flex;
+  gap: 4rem;
 }

@@ -6,13 +6,14 @@
     <link href="art.css" rel="stylesheet">
     <link href="cord.css" rel="stylesheet">
     <link href="bulbs.css" rel="stylesheet">
+    <link href="light-switch.css" rel="stylesheet">
   </head>
 
   <body>
     <christmas-lights></christmas-lights>
 
     <h1 class="note-cursor">Bradly Feeley</h1>
-    <div style="display: flex; gap: 4rem;">
+    <div id="main">
       <div>
         <h2>Seasoned and experienced Ruby on Rails engineer since 2006</h2>
         <h3><small>San Diego, California / Lopez Island, Washington / Everywhere in-between</small></h3>
@@ -153,6 +154,32 @@
           </div>
         </div>
       </div>
+      <div id="light-switch">
+      <pre class="light-switch-on">
+╔═══════════╗
+║           ║
+║           ║
+║    ╔═╗    ║
+║    ║░║    ║
+║    ╠═╣    ║
+║    ║ ║    ║
+║    ╚═╝    ║
+║           ║
+║           ║
+╚═══════════╝</pre>
+      <pre class=" light-switch-off">
+╔═══════════╗
+║           ║
+║           ║
+║    ╔═╗    ║
+║    ║ ║    ║
+║    ╠═╣    ║
+║    ║░║    ║
+║    ╚═╝    ║
+║           ║
+║           ║
+╚═══════════╝</pre>
+      </div>
     </div>
 
     <footer>
@@ -165,4 +192,5 @@
   </body>
   <script src="http://unpkg.com/tone"></script>
   <script src="christmas-lights.js"></script>
+  <script src="light-switch.js"></script>
 </html>
