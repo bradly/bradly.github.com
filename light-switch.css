@@ -2,11 +2,10 @@
   background-color: var(--background);
   border: 6px solid var(--background);
   color: var(--color);
-  font-size: 7px;
-  position: fixed;
-  bottom: 0;
-  right: 8px;
+  font-size: 3px;
 }
+
+#light-switch:hover { cursor: pointer; }
 
 .light-switch-on  { display: block; }
 .light-switch-off { display: none;  }
